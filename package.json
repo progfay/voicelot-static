@@ -13,7 +13,9 @@
     "dev": "webpack --mode=development --watch --progress --colors",
     "prebuild": "npm run clean",
     "build": "webpack --mode=production",
-    "start": "python3 -m http.server --directory dist 5000"
+    "start": "now dev --listen 5000",
+    "predeploy": "now rm --yes voicelot",
+    "deploy": "npm run build && now --prod"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -33,6 +35,7 @@
     "babel-loader": "^8.0.5",
     "copy-webpack-plugin": "^4.6.0",
     "html-webpack-plugin": "^3.2.0",
+    "now": "^16.7.0",
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.1",
     "workbox-webpack-plugin": "^3.6.3"
