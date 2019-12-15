@@ -1,0 +1,10 @@
+dist
+.env
+server_key.pem
+server_crt.pem
+server_csr.pem
+static/cache
+entries/
+backup/*
+!backup/.gitkeep
+node_modules
