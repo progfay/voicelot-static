@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const WorkboxPlugin = require('workbox-webpack-plugin')
 const path = require('path')
@@ -32,6 +33,10 @@ module.exports = async (env, argv) => ({
       template: path.resolve(__dirname, 'src/index.html'),
       chunks: ['app', (argv.mode === 'production' ? 'register' : null)].filter(Boolean),
       filename: 'index.html'
+    }),
+    new ScriptExtHtmlWebpackPlugin({
+      async: 'app.js',
+      defer: 'register.js'
     }),
     new CopyWebpackPlugin([{ from: 'static', to: 'static' }]),
     argv.mode === 'production'

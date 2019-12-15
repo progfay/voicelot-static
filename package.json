@@ -38,6 +38,7 @@
     "copy-webpack-plugin": "^5.1.1",
     "html-webpack-plugin": "^3.2.0",
     "now": "^16.7.0",
+    "script-ext-html-webpack-plugin": "^2.1.4",
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.1",
     "workbox-webpack-plugin": "^3.6.3"
