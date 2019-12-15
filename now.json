@@ -1,7 +1,6 @@
 {
     "version": 2,
     "name": "voicelot",
-    "alias": "voicelot",
     "builds": [
         { "src": "dist/**/*", "use": "@now/static" }
     ],
