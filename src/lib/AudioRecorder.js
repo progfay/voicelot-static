@@ -42,7 +42,6 @@ class AudioRecorder {
     this.processor.disconnect()
     this.processor.onaudioprocess = null
     this.processor = null
-    this.stream.getTracks().forEach(track => track.stop())
     this.stream = null
     clearInterval(this.slicing)
   }
