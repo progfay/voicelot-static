@@ -16,7 +16,7 @@ export default class VoicelotPlayer {
   constructor (bufferArray) {
     this.bufferArray = bufferArray.map(_ => _)
     this.voice = null
-    this.selected = this.bufferArray[~~(Math.random() * this.bufferArray)]
+    this.selected = this.bufferArray[~~(Math.random() * this.bufferArray.length)]
     this.voiceRollEnded = false
     this.isPlaying = false
     this.lowpassFilterNode = this.createBiquadFilter('lowpass', 22050)
